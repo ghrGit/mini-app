@@ -1,4 +1,55 @@
 <!--index.wxml-->
+    
 <view class="container">
-你好
+<view class='wrapper'>
+<view class='clearfix header'>
+ <text class='col-sm-3 txt-center'>伙伴</text>
+ <text class='col-sm-3 txt-center'>金额(人民币)</text>
+ <text class='col-sm-3 txt-center'>分摊</text>
+ <text class='col-sm-3 txt-center'>操作</text>
 </view>
+<view class="box clearfix" wx:for="{{list}}" wx:key="id">
+<view class="col-sm-3"> 
+<image src="{{imgUrl}}" class="tx" />
+</view>
+<view class="col-sm-3"> 
+ <input type='text' value="{{item.money}}" data-id="{{item.id}}" bindinput="changeMoney"></input>
+ </view>
+ <text class='col-sm-3 txt-center'>{{item.payMoney}}</text>
+ <view class='col-sm-3 txt-center'>
+ <image src="{{deleteImgUrl}}" data-id="{{item.id}}" class="delete"  bindtap='deleteOne'/>
+ </view>
+</view>
+<view class='clearfix box'>
+<text class='col-sm-3  txt-center' >餐盒费</text>
+<view class='col-sm-3' >
+ <input type='text' value="{{footBoxMoney}}" bindinput="changeFootBoxMoney"></input>
+ </view>
+ <text class='col-sm-3  txt-center'>配送费</text>
+ <view class='col-sm-3'>
+ <input type='text' value="{{deliverFee}}" bindinput="changeDeliverFeeMoney"></input>
+ </view>
+  </view> 
+<!-- <view> -->
+<view class="txt-center"> 
+<span  class="btn"  bindtap='addOne'>+ 新增</span>
+</view>
+</view>
+<view class="footer">
+<view class="col-sm-6 txt-center"> 
+<text>{{sum}}</text>
+<view> 合计金额</view>
+</view>
+<view class="col-sm-6 txt-center"> 
+ <view> 
+ <input type = "text" value="{{freeMoney}}"  bindinput="changeFreeMoney"></input>
+ </view>
+<view > 
+减免金额
+</view>
+ </view>
+
+</view>
+</view>
+
+

@@ -7,18 +7,9 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "友人帐",
     "navigationBarTextStyle":"black"
-  },
-  "tabBar":{
-    "backgroundColor": "#fff",
-    "list":[ {
-      "pagePath": "pages/index/index",
-      "text": "首页"
-    },{
-      "pagePath":"pages/calc/calc",
-      "text":"开始"
-    }
-  ]
   }
 }
+
+
